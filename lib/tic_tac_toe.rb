@@ -3,7 +3,14 @@ def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")
 end
 
-# Define your WIN_COMBINATIONS constant
+def input_to_index(str)
+  str.to_i - 1 
+end
+
+def move(board, index, player = 'X')
+  board[index] = player
+end
+
 WIN_COMBINATIONS = [
  [0,1,2], # Top row
  [3,4,5], # Middle row
